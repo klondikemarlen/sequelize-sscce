@@ -25,7 +25,7 @@ export function createSequelize7Instance(
     __isOptionsObject__,
     ...sequelizeOptions
   } = wrappedOptions;
-  const connectionOptions = dialectOptions?.options;
+  const connectionOptions = dialectOptions && dialectOptions.options;
 
   // Sequelize v7 resolves dialects and connection options from standalone dialect packages.
   return new Sequelize7Constructor({
